@@ -81,4 +81,26 @@ We will especially consider:
 
 This test is based on the following gist https://gist.github.com/alirussell/9a519e07128b7eafcb50
 
+## How to run
+````
+$ git clone https://github.com/dhramijo/yoti-sdk-backend-test.git
+$ mvn spring-boot:run
+````
+### Start a new room clean
+````
+HTTP POST /api/v1/clean
+````
+Request
 
+```javascript
+{
+  "roomSize" : [5, 5],
+  "coords" : [1, 2],
+  "patches" : [
+    [1, 0],
+    [2, 2],
+    [2, 3]
+  ],
+  "instructions" : "NNESEESWNWW"
+}
+```
